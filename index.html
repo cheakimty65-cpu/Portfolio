@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-accent="blue">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070b14" />
+    <meta
+      name="description"
+      content="Chea Kimty — Full-Stack Web Developer and Software Engineer."
+    />
+    <title>Portfolio | Chea Kimty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav
+        class="nav-shell container"
+        aria-label="Main navigation"
+        data-i18n-aria="mainNavigation"
+      >
+        <a class="brand" href="#home" aria-label="Portfolio home">
+          <span class="brand-icon">&lt;/&gt;</span>
+          <span>Portfolio</span>
+        </a>
+        <button
+          class="menu-toggle icon-button"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation"
+          data-i18n-aria="navMenuOpen"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-content" id="primaryNav">
+          <div class="nav-links">
+            <a class="nav-link" href="#about" data-i18n="navAbout">About</a>
+            <a class="nav-link" href="#projects" data-i18n="navProjects"
+              >Projects</a
+            >
+            <a class="nav-link" href="#skills" data-i18n="navSkills"
+              >Technical Skills</a
+            >
+            <a class="nav-link" href="#contact" data-i18n="navContact"
+              >Contact</a
+            >
+          </div>
+          <div class="nav-actions">
+            <button class="edit-button" id="openEditor" type="button">
+              <i class="fa-regular fa-pen-to-square"></i>
+              <span data-i18n="editInfo">Edit Info</span>
+            </button>
+            <button
+              class="language-button"
+              id="languageToggle"
+              type="button"
+              aria-label="Switch language"
+              data-i18n-aria="switchToKhmer"
+            >
+              <i class="fa-solid fa-globe"></i>
+              <span id="languageLabel">KM</span>
+            </button>
+            <div class="settings-wrap">
+              <button
+                class="icon-button settings-button"
+                id="settingsToggle"
+                type="button"
+                aria-label="Theme and accent settings"
+                data-i18n-aria="settingsLabel"
+                aria-expanded="false"
+                aria-controls="settingsPanel"
+              >
+                <i class="fa-solid fa-gear"></i>
+              </button>
+              <div class="settings-panel" id="settingsPanel" hidden>
+                <p class="settings-title" data-i18n="appearance">Appearance</p>
+                <button
+                  class="theme-toggle settings-option"
+                  id="themeToggle"
+                  type="button"
+                >
+                  <span data-i18n="lightTheme">Light theme</span>
+                  <i class="fa-solid fa-moon"></i>
+                </button>
+                <p class="settings-title" data-i18n="accentColor">
+                  Accent color
+                </p>
+                <div
+                  class="accent-options"
+                  aria-label="Accent color"
+                  data-i18n-aria="accentColor"
+                >
+                  <button
+                    class="accent-swatch blue-swatch"
+                    type="button"
+                    data-accent-choice="blue"
+                    aria-label="Blue accent"
+                    data-i18n-aria="blueAccent"
+                  ></button>
+                  <button
+                    class="accent-swatch indigo-swatch"
+                    type="button"
+                    data-accent-choice="indigo"
+                    aria-label="Indigo accent"
+                    data-i18n-aria="indigoAccent"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-anchor" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="availability">
+              <span class="availability-dot"></span>
+              <span data-i18n="availability"
+                >Open for Full-Stack Internship &amp; Freelance</span
+              >
+            </div>
+            <div class="hero-intro">
+              <div class="profile-avatar-frame">
+                <img
+                  class="profile-avatar"
+                  src="profile.jpg"
+                  alt="Portrait of Chea Kimty"
+                  width="160"
+                  height="213"
+                />
+              </div>
+              <div class="hero-identity">
+                <p class="hero-greeting" data-i18n="greeting">
+                  Hello! My name is
+                </p>
+                <h1 class="hero-name" id="heroName">
+                  <span class="name-first">Chea</span>
+                  <span class="name-last">Kimty</span>
+                </h1>
+              </div>
+            </div>
+            <p class="hero-role" data-i18n="role">
+              Full-Stack Web Developer &amp; Software Engineer
+            </p>
+            <p class="hero-bio" id="heroBio">
+              Year 3 Computer Science student at Build Bright University. I
+              build scalable web applications and APIs focused on speed,
+              security, and clean UI.
+            </p>
+            <div class="hero-buttons">
+              <a class="button button-primary" href="#projects">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span data-i18n="viewProjects">View My Projects</span>
+              </a>
+              <a class="button button-outline" href="#contact">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span data-i18n="contactMe">Contact Me</span>
+              </a>
+            </div>
+            <div class="stack-block">
+              <p class="eyebrow" data-i18n="coreStack">CORE TECH STACK</p>
+              <div class="stack-pills">
+                <span>React</span><span>TypeScript</span
+                ><span>ASP.NET Core</span> <span>C#</span
+                ><span>MS SQL Server</span><span>Java</span>
+                <span>HTML/CSS/JS</span><span>Docker</span><span>Git</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="editor-card">
+              <div class="editor-titlebar">
+                <div class="window-dots" aria-hidden="true">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="editor-filename">DeveloperProfile.cs</span>
+              </div>
+              <div
+                class="code-scroll"
+                tabindex="0"
+                aria-label="Developer profile C sharp code"
+              >
+                <pre
+                  class="code-block"
+                ><code><span class="code-purple">public class</span> <span class="code-blue">WebDeveloper</span>
+{
+    <span class="code-purple">public string</span> Name =&gt; <span class="code-green" id="codeName">"Chea Kimty"</span>;
+    <span class="code-purple">public string</span> Location =&gt; <span class="code-green">"Phnom Penh, Cambodia"</span>;
+    <span class="code-purple">public string</span> University =&gt; <span class="code-green">"Build Bright University (Year 3)"</span>;
+    <span class="code-purple">public string[]</span> Stack =&gt; <span class="code-purple">new</span>[]
+    {
+        <span class="code-green">"React &amp; TypeScript"</span>,
+        <span class="code-green">"ASP.NET Core &amp; C#"</span>,
+        <span class="code-green">"Java &amp; SQL Server"</span>,
+        <span class="code-green">"Docker &amp; GitHub"</span>
+    };
+
+    <span class="code-purple">public bool</span> ReadyForInternship() =&gt; <span class="code-orange">true</span>;
+}</code></pre>
+              </div>
+              <div class="stats-grid">
+                <article class="stat-card">
+                  <strong>10+</strong>
+                  <span data-i18n="completedProjects">Completed Projects</span>
+                </article>
+                <article class="stat-card">
+                  <strong data-i18n="fullStack">Full-Stack</strong>
+                  <span data-i18n="coreFocus">Core Focus</span>
+                </article>
+                <article class="stat-card">
+                  <strong class="stat-green">100%</strong>
+                  <span data-i18n="commitment">Commitment</span>
+                </article>
+              </div>
+            </div>
+            <div class="hero-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section section-anchor" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow section-number">
+              01 / <span data-i18n="aboutLabel">ABOUT</span>
+            </p>
+            <h2 data-i18n="aboutTitle">Building useful things, with care.</h2>
+            <p data-i18n="aboutLead">
+              A computer science student focused on reliable full-stack products
+              and thoughtful user experiences.
+            </p>
+          </div>
+          <div class="about-grid">
+            <article class="surface-card about-copy">
+              <h3 data-i18n="aboutCardTitle">A little about me</h3>
+              <p data-i18n="aboutParagraphOne">
+                I am a Year 3 Computer Science student at Build Bright
+                University in Phnom Penh, Cambodia. I enjoy turning real-world
+                needs into clear, dependable software.
+              </p>
+              <p data-i18n="aboutParagraphTwo">
+                From shaping a database and building secure APIs to polishing an
+                interface, I like working across the stack and learning from a
+                collaborative engineering team.
+              </p>
+              <div class="about-facts">
+                <div>
+                  <span data-i18n="locationLabel">Location</span
+                  ><strong>Phnom Penh, Cambodia</strong>
+                </div>
+                <div>
+                  <span data-i18n="availabilityLabel">Availability</span
+                  ><strong data-i18n="internshipAvailable"
+                    >Internship &amp; Freelance</strong
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="surface-card education-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <p class="eyebrow" data-i18n="educationLabel">EDUCATION</p>
+              <h3 data-i18n="degree">Bachelor of Computer Science</h3>
+              <p class="accent-text">Build Bright University</p>
+              <p class="muted" data-i18n="yearThree">
+                Year 3 · Phnom Penh, Cambodia
+              </p>
+              <div class="divider"></div>
+              <p class="muted" data-i18n="coursework">
+                Coursework includes web application development, databases,
+                object-oriented programming, and data structures.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="content-section alternate-section section-anchor"
+        id="skills"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow section-number">
+              02 / <span data-i18n="skillsLabel">SKILLS</span>
+            </p>
+            <h2 data-i18n="skillsTitle">Technical Skills</h2>
+            <p data-i18n="skillsLead">
+              Tools and technologies I use to design, build, and ship full-stack
+              applications.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <article class="surface-card skill-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-window-maximize"></i>
+              </div>
+              <h3 data-i18n="frontend">Frontend</h3>
+              <div class="tag-list">
+                <span>React</span><span>TypeScript</span><span>HTML5</span
+                ><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span>
+              </div>
+            </article>
+            <article class="surface-card skill-card">
+              <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+              <h3 data-i18n="backend">Backend</h3>
+              <div class="tag-list">
+                <span>C#</span><span>ASP.NET Core</span><span>Java</span
+                ><span>REST APIs</span><span>Entity Framework</span>
+              </div>
+            </article>
+            <article class="surface-card skill-card">
+              <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+              <h3 data-i18n="database">Database</h3>
+              <div class="tag-list">
+                <span>MS SQL Server</span><span>PostgreSQL</span
+                ><span>SQLite</span
+                ><span data-i18n="databaseDesign">Database Design</span>
+              </div>
+            </article>
+            <article class="surface-card skill-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h3 data-i18n="tools">Tools &amp; DevOps</h3>
+              <div class="tag-list">
+                <span>Git &amp; GitHub</span><span>Docker</span
+                ><span>VS Code</span><span>Postman</span><span>Linux</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section section-anchor" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow section-number">
+              03 / <span data-i18n="projectsLabel">SELECTED WORK</span>
+            </p>
+            <h2 data-i18n="projectsTitle">Featured Projects</h2>
+            <p data-i18n="projectsLead">
+              A selection of applications and systems I have designed and built.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <article class="surface-card project-card">
+              <div class="project-top">
+                <i class="fa-regular fa-folder-open"></i
+                ><a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub project"
+                  data-i18n-aria="githubProject"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <h3 data-project-field="project1Title">Loan Management System</h3>
+              <p data-project-field="project1Description">
+                A full-stack application for managing borrowers, loan types,
+                payment schedules, and interest calculations with role-based
+                views.
+              </p>
+              <div class="tag-list">
+                <span>ASP.NET Core</span><span>React</span
+                ><span>SQL Server</span>
+              </div>
+            </article>
+            <article class="surface-card project-card">
+              <div class="project-top">
+                <i class="fa-regular fa-folder-open"></i
+                ><a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub project"
+                  data-i18n-aria="githubProject"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <h3 data-project-field="project2Title">
+                Enterprise REST API &amp; Dashboard
+              </h3>
+              <p data-project-field="project2Description">
+                A full-stack CRUD solution with JWT authentication, data
+                transfer objects, and a responsive React TypeScript frontend.
+              </p>
+              <div class="tag-list">
+                <span>ASP.NET Core</span><span>React</span
+                ><span>TypeScript</span>
+              </div>
+            </article>
+            <article class="surface-card project-card">
+              <div class="project-top">
+                <i class="fa-regular fa-folder-open"></i
+                ><a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub project"
+                  data-i18n-aria="githubProject"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <h3 data-project-field="project3Title">
+                Inventory &amp; POS Database System
+              </h3>
+              <p data-project-field="project3Description">
+                A normalized relational system for products, suppliers, purchase
+                orders, sales, and real-time stock movements.
+              </p>
+              <div class="tag-list">
+                <span>MS SQL Server</span><span>T-SQL</span><span>C#</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="content-section alternate-section section-anchor"
+        id="contact"
+      >
+        <div class="container">
+          <div class="contact-card surface-card">
+            <div class="contact-copy">
+              <p class="eyebrow section-number">
+                04 / <span data-i18n="contactLabel">WHAT'S NEXT?</span>
+              </p>
+              <h2 data-i18n="contactTitle">Let's build something together.</h2>
+              <p class="muted" data-i18n="contactLead">
+                I am open to a Full-Stack internship or freelance projects. Have
+                an opportunity or idea? Send me a message.
+              </p>
+              <div class="contact-links">
+                <a href="mailto:cheakimty65@gmail.com"
+                  ><i class="fa-regular fa-envelope"></i
+                  ><span>cheakimty65@gmail.com</span></a
+                >
+                <a
+                  href="https://t.me/ty2412"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-telegram"></i><span>@ty2412</span></a
+                >
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-github"></i><span>GitHub</span></a
+                >
+                <a
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a
+                >
+              </div>
+            </div>
+            <form id="contactForm" class="contact-form">
+              <label for="name" data-i18n="formName">Your name / company</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                data-i18n-placeholder="namePlaceholder"
+                placeholder="Your name"
+              />
+              <label for="email" data-i18n="formEmail">Email address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@company.com"
+              />
+              <label for="message" data-i18n="formMessage">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                data-i18n-placeholder="messagePlaceholder"
+                placeholder="Tell me about your opportunity..."
+              ></textarea>
+              <button class="button button-primary" type="submit">
+                <i class="fa-regular fa-paper-plane"></i
+                ><span data-i18n="sendMessage">Send Message</span>
+              </button>
+              <p id="formAlert" class="form-alert" role="status" hidden></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          <span data-i18n="footer">Designed &amp; built by</span>
+          <strong>Chea Kimty</strong> · Build Bright University
+        </p>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="editorModal" hidden>
+      <section
+        class="editor-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="editorTitle"
+      >
+        <div class="modal-heading">
+          <div>
+            <p class="eyebrow" data-i18n="editLabel">
+              PERSONALIZE YOUR PORTFOLIO
+            </p>
+            <h2 id="editorTitle" data-i18n="editTitle">Edit Info</h2>
+          </div>
+          <button
+            class="icon-button modal-close"
+            id="closeEditor"
+            type="button"
+            aria-label="Close editor"
+            data-i18n-aria="closeEditor"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <form id="editorForm">
+          <label for="editName" data-i18n="yourName">Your name</label>
+          <input id="editName" name="name" type="text" required />
+          <label for="editBio" data-i18n="yourBio">Hero bio</label>
+          <textarea id="editBio" name="bio" rows="4" required></textarea>
+          <p class="modal-subheading" data-i18n="projectDetails">
+            Project details
+          </p>
+          <label for="editProject1Title" data-i18n="projectOne"
+            >Project 1 title</label
+          >
+          <input
+            id="editProject1Title"
+            name="project1Title"
+            type="text"
+            required
+          />
+          <label for="editProject1Description" data-i18n="projectDescription"
+            >Project 1 description</label
+          >
+          <textarea
+            id="editProject1Description"
+            name="project1Description"
+            rows="2"
+            required
+          ></textarea>
+          <label for="editProject2Title" data-i18n="projectTwo"
+            >Project 2 title</label
+          >
+          <input
+            id="editProject2Title"
+            name="project2Title"
+            type="text"
+            required
+          />
+          <label for="editProject2Description" data-i18n="projectDescriptionTwo"
+            >Project 2 description</label
+          >
+          <textarea
+            id="editProject2Description"
+            name="project2Description"
+            rows="2"
+            required
+          ></textarea>
+          <label for="editProject3Title" data-i18n="projectThree"
+            >Project 3 title</label
+          >
+          <input
+            id="editProject3Title"
+            name="project3Title"
+            type="text"
+            required
+          />
+          <label
+            for="editProject3Description"
+            data-i18n="projectDescriptionThree"
+            >Project 3 description</label
+          >
+          <textarea
+            id="editProject3Description"
+            name="project3Description"
+            rows="2"
+            required
+          ></textarea>
+          <p class="editor-status" id="editorStatus" role="status" hidden></p>
+          <div class="modal-actions">
+            <button
+              class="button button-muted"
+              id="cancelEditor"
+              type="button"
+              data-i18n="cancel"
+            >
+              Cancel
+            </button>
+            <button class="button button-primary" type="submit">
+              <i class="fa-regular fa-floppy-disk"></i
+              ><span data-i18n="saveChanges">Save Changes</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
